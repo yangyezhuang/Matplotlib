@@ -2,9 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 plt.rcParams['font.family'] = 'simhei'
-font = {
-    'size': 15
-}
+
 
 title = ['福建', '辽宁', '河北', '安徽', '广东', '山东', '陕西', '广西']
 value = [144, 127, 188, 162, 139, 155, 177, 166]
@@ -23,7 +21,7 @@ def rose_graph():
     for t, v in zip(theta, value):  # 柱状图数量
         plt.text(t, v + 70, v, fontsize=12)
 
-    plt.title('南丁格尔玫瑰图', fontdict=font)
+    plt.title('南丁格尔玫瑰图', fontsize=15)
     plt.axis(False)  # 关闭极坐标轴
     plt.tight_layout()  # 自动调节子图大小
     plt.show()

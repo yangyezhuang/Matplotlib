@@ -10,7 +10,7 @@ v2 = [63, 88, 99, 69, 66]
 
 def radar(name, v1, v2):
     plt.subplot(projection='polar')
-    plt.title('多线雷达图', fontsize=16)
+    plt.title('雷达图', fontsize=16)
     
     theta = np.linspace(0, 2 * np.pi, len(v1), endpoint=False)
     theta = np.concatenate((theta, [theta[0]]))

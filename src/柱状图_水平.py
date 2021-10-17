@@ -4,7 +4,6 @@ import numpy as np
 plt.rcParams['font.family'] = 'simhei'
 plt.rcParams['axes.unicode_minus'] = False
 font = {
-    'family': 'SimHei',
     'weight': 'bold',
     'size': 16
 }
@@ -24,8 +23,9 @@ def func():
         plt.text(y, x + 0.4, y)
     plt.yticks(np.arange(len(labs)) + 0.4 / 2, labs)
     plt.legend(loc='lower right')
-    plt.grid(axis='x',alpha=0.5)
+    plt.grid(axis='x', alpha=0.5)
     plt.show()
 
 
-func()
+if __name__ == '__main__':
+    func()

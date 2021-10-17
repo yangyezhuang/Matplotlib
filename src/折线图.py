@@ -8,13 +8,12 @@ v2 = [17, 28, 33, 24]
 
 
 def line_graph():
-    plt.title('折线图',fontsize=18)
+    plt.title('折线图', fontsize=18)
     plt.plot(name, v1, 'o--', label='一月')
     plt.plot(name, v2, 'd-', label='二月')
-    plt.xlabel('酒店名称')
     plt.ylabel('销售额')
     plt.legend()
-    plt.grid(axis='y',alpha=0.5)
+    plt.grid(axis='y', alpha=0.5)
     plt.show()
 
 

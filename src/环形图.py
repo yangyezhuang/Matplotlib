@@ -16,7 +16,6 @@ def ring_graph():
             wedgeprops=dict(width=0.4, edgecolor='w'))
     # radius：半径
     # pctdistance：控制数字与圆心间的距离
-    # plt.pie([1], radius=0.6, colors="w")
     plt.legend(label, bbox_to_anchor=(-0.5, 0, 0.5, 1))
     plt.show()
 

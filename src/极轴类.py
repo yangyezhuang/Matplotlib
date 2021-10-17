@@ -12,23 +12,21 @@ plt.suptitle('极轴类合集', fontsize=20)
 class Graph(object):
     def __init__(self):
         self.font = {
-            'color': 'r',
-            'size': 13
+            'size': 12
         }
 
     def pie(self):
         plt.subplot(231)
         plt.title('饼图', fontdict=self.font)
         explode = [0.01] * len(subjects)
-        plt.pie(v1, explode,  pctdistance=0.7, autopct='%.2f%%')
-        plt.legend(loc='upper left', bbox_to_anchor=[1, 0, 0.5, 1], fontsize=7)
+        plt.pie(v1, explode, pctdistance=0.7, autopct='%.2f%%')
+        plt.legend(subjects, loc='upper left', bbox_to_anchor=[1, 0, 0.5, 1], fontsize=7)
 
     def ring(self):
         plt.subplot(232)
         plt.title('环形图', fontdict=self.font)
         explode = [0.01] * len(subjects)
-        plt.pie(v2, explode,  pctdistance=0.7, autopct='%.2f%%')
-        plt.pie([1], radius=0.4, colors='w')
+        plt.pie(v2, explode, autopct='%.1f%%', pctdistance=0.8, wedgeprops=dict(width=0.5, edgecolor='w'))
         plt.legend(loc='upper left', bbox_to_anchor=[1, 0, 0.5, 1], fontsize=7)
 
     def two_ring(self):
@@ -38,12 +36,12 @@ class Graph(object):
         label = ["面粉", "砂糖", "奶油", "果酱", "坚果"]
         color = ['pink', 'greenyellow', 'lightcoral', 'yellow', 'cyan']
         plt.title('内嵌环形图', fontdict=self.font)
-        plt.pie(a, autopct='%.1f%%', radius=1,  pctdistance=0.85, colors=color,
+        plt.pie(a, autopct='%.1f%%', radius=1, pctdistance=0.85, colors=color,
                 wedgeprops=dict(edgecolor='w', width=0.3))
-        plt.pie(b, autopct='%.1f%%', radius=0.7,  pctdistance=0.65, colors=color,
+        plt.pie(b, autopct='%.1f%%', radius=0.7, pctdistance=0.65, colors=color,
                 wedgeprops=dict(edgecolor='w', width=0.3))
         plt.legend(label, fontsize=7, title="颜料表",
-                   loc="upper left", bbox_to_anchor=[1, 0, 0.5, 1])
+                   bbox_to_anchor=[1, 0, 0.5, 1])
 
     def radar(self, subjects, v1):
         plt.subplot(234, projection='polar')

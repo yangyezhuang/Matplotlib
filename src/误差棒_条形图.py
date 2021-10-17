@@ -11,6 +11,6 @@ err_style = dict(ecolor='black', elinewidth=2, capsize=4)
 
 plt.title("不同图书种类的采购情况")
 plt.barh(x, y, height=0.6, color=colors, xerr=std_err, error_kw=err_style)
-plt.grid(axis="x", ls=":", color="gray", alpha=0.3)
+plt.grid(axis="x", color="gray", alpha=0.3)
 plt.xlim(0, 2600)
 plt.show()
