@@ -8,7 +8,7 @@ v2 = [16, 8, 14, 17]
 
 
 def bar():
-    plt.title('堆积柱状图')
+    plt.title('叠加柱状图')
     plt.bar(name, v1, width=0.5, label='v1')
     for x, y in enumerate(v1):
         plt.text(x, y, y, ha='center')
