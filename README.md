@@ -1,4 +1,4 @@
-# matplotlib-demo
+# matplotlib-project
 
 ## 项目简介
 
